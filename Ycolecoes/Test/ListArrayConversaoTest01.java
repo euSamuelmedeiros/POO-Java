@@ -27,7 +27,6 @@ public class ListArrayConversaoTest01 {
         System.out.println(Arrays.toString(numbersArray));
         System.out.println(integerList);
 
-        System.out.println("ola");
-        System.out.println("ola");
+
     }
 }
