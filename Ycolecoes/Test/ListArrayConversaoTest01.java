@@ -26,5 +26,7 @@ public class ListArrayConversaoTest01 {
         integerList.set(0, 12); // mudando a o local 0 do array para 12.
         System.out.println(Arrays.toString(numbersArray));
         System.out.println(integerList);
+
+        System.out.println("ola");
     }
 }
