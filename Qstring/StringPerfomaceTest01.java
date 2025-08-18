@@ -26,7 +26,7 @@ public class StringPerfomaceTest01 {
         String texto = " ";
         for (int i = 0; i < tamanho; i++) {
             texto += i;
-            System.out.println(texto);
+
         }
     }
 

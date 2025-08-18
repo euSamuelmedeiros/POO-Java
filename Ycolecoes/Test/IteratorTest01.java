@@ -4,11 +4,12 @@ import Ycolecoes.Domain.Manga;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IteratorTest01 {
     public static void main(String[] args) {
-        List<Manga> mangas = new ArrayList<>();
+        List<Manga> mangas = new LinkedList<>(); //caso for remover muitos dados das listas use o (LinkedList<>)
 
         mangas.add(new Manga(3L, "pokemom", 19.9, 1));
         mangas.add(new Manga(1L, "hora de aventura", 9.6, 5));
