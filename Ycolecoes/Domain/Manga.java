@@ -79,7 +79,7 @@ public class Manga implements Comparable<Manga> {
 
     @Override
     public int compareTo(Manga outroManga) {
-        return Long.compare(this.id, outroManga.getId());
+        return CharSequence.compare(this.name, outroManga.getName());
     }
 
 }
