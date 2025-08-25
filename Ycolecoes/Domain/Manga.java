@@ -82,4 +82,5 @@ public class Manga implements Comparable<Manga> {
         return CharSequence.compare(this.name, outroManga.getName());
     }
 
+
 }
