@@ -12,7 +12,7 @@ public class OPlogicos {
         System.out.println(isDentroDaLeiMenor);
 
         double currentaccount = 300;
-        double savingsaccount = 10000;
+        double savingsaccount = 10000; // teste do lugar do pc novo ta top ate agora
         float Ps5 = 5000;
         boolean isPs5Compravel = currentaccount > Ps5 || savingsaccount > Ps5;
         String phrase = String.format("O video game pode ser comprado %b", isPs5Compravel);
