@@ -4,6 +4,7 @@ package ZZEStreams.Test;
 import ZZEStreams.Domain.Category;
 import ZZEStreams.Domain.LightNovel;
 import ZZEStreams.Domain.Promocao;
+import ZZEStreams.Domain.Promocao2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,18 +21,18 @@ public class StreamGroupingBy3 {
 
     //agrupamento por promoçao
     public static void main(String[] args) {
-        Map<Promocao, List<LightNovel>> collect = lightNovels.stream()
+        Map<Promocao2, List<LightNovel>> collect = lightNovels.stream()
                 .collect(Collectors.groupingBy(ln -> {
-                            return ln.getPrice() < 6 ? Promocao.UNDER_PROMOCAO : Promocao.NORMAL_PROMOCAO;
+                            return ln.getPrice() < 6 ? Promocao2.UNDER_PROMOCAO : Promocao2.NORMAL_PROMOCAO;
                         }
                 ));
         System.out.println(collect);
 
         //agrupamento por categoria e promoção
 
-        Map<Category, Map<Promocao, List<LightNovel>>> categoryMapMap = lightNovels.stream()
+        Map<Category, Map<Promocao2, List<LightNovel>>> categoryMapMap = lightNovels.stream()
                 .collect(Collectors.groupingBy(LightNovel::getCategory,
-                        Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promocao.UNDER_PROMOCAO : Promocao.NORMAL_PROMOCAO)));
+                        Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promocao2.UNDER_PROMOCAO : Promocao2.NORMAL_PROMOCAO)));
         System.out.println("---------");
         System.out.println(categoryMapMap);
     }
